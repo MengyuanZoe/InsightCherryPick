@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Insta Marketing</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../static/css/clean-blog.min.css" rel="stylesheet">
+    <link href="../templates/starter-template.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><font color="DarkOrange">Home</font></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#example"><font color="DarkOrange">Play the Example</font></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#slides"><font color="DarkOrange">Slides</font></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about"><font color="DarkOrange">About Me</font></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact"><font color="DarkOrange">Contact</font></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('../static/img/instagram-mobile-smartphone-social-networking-iphone.jpeg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1><font color="MediumTurquoise">CherryPick.ai: <br> Predicting Consumer Behavior using Instagram Comments</font></h1>
+                        <h2 class="subheading">Consulting Project for Insight Data Science Program </h2>
+                        <span class="meta">Posted by <a href="#">Mengyuan Liu</a> on August 11th, 2017</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2> Intro </h2>
+                    <p>Nowadays, millions of brands and retailers promote product via social media outlets, such as Instagram and subscription emails, with the goal that consumers will ultimately make a purchase. However, whether social medica advertising actually translates to product sales is unclear. Social media posts may only serve to raise awareness of the products and when users subscribe for emails about products, the emails either get buried and lost amongst other promotions, or filtered as spam. </p>
+                    <blockquote> To combat this customer attrition problem, CherryPick.ai provides actionable insights to retailers and brands based on potential customers' Instagram comments to motivate consumer purchases.</blockquote> 
+                    <p>CherryPick.ai helps retailers drive sales by moving customers through a marketing funnel. When a non-spam comment is made for a product on an Instagram promotion post, it can vary in the degree of consumer interest towards a given proguct: be either negative, neutral, or shows interest in the product. If the consumer shows interest in a product, they may first exhibit evalution of the product before an intent to purchase the product. CherryPick.ai sends targeted notifications to consumers if there is high purchase intent to push customers into the final step in the marketing funnel, where the consumer ultimately purchases the product.</p>
+                    <a href="#">
+                        <img class="img-responsive" src="../static/img/funnel.png" alt="">
+                    </a>
+                    <span class="caption text-muted">The marketing funnel.</span>
+                    <p>Currently, CherryPick.ai manually assesses Instagram comments to determine a consumer's purchase intent. This process is laborious, expensive and impossible to achieve real-time analysis. As a data science consultant for CherryPick.ai, I built a natural language classifier to achieve real-time identification of purchase intent, which will be implemented into their platform. My project, which I describe in more detail in this blog, will ultimately save CherryPick.ai and their customers a lot of capital.</p>
+                    <section id="example">
+                    <h2 class="section-heading"><font color="MediumTurquoise"> Try It Out!!!</font></h2>
+                    <br>
+                    <h4> To give you an idea of what this natural language classifier can do, here is an interactive example to play with...</h4>
+
+                    <p>Type in an Instagram comment that you would normally do under a product promotion post and see how we categorize your mentality.</p>
+                    <p> Hint: use emojis as you wish, like ❤️😍!</p>
+                    <section id="example2">
+                    <form  action="/blog_output" method="GET">
+                        <div class="form-group">
+                            <label for="input_comment">Input Comment:</label>
+                            <input type="text" id="input_comment" name='input_comment' size="50" placeholder="e.g. I love this product!!" data-emojiable="true">
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-default btn-lg">Find purchase intent prediction!</button>
+                        </div>
+
+                    </form>
+                    </section>
+                    </section>
+
+                    <!-- Results page -->  
+                    <section id="results">
+                    {% block content %}{% endblock %}
+                    </section>
+
+                    <h2 class="section-heading"> How does the magic happen? </h2>
+                    <p>CherryPick.ai provided a database containing over 200K comments, of which 30K were labeled according to 7 marketing funnel stages (AKA "classes): negative, neutral, interest, evaluation, purchase intent, purchased and spam. Here I show an example of each class.</p>
+                    <a href="#">
+                        <img class="img-responsive" src="../static/img/labels.png" width=400 style="margin:0 auto">
+                    </a>
+                    <span class="caption text-muted">Example of labeled comments.</span>
+
+
+                    <p> Because these different classes are part of a funnel, the classes are naturally highly imbalanced, where purchase intent is infrequent. I’ll talk about how I dealt with this issue later in the blog in the <a href="#imbalanced"> later section</a>. </p>
+
+                    <h4> Natural Language Processing </h4>
+                    <p> Text is only useful if you can extract features from it. For the 200K comments, I engineered 58 features to provide richer context to the comments from a Machine Learning perspective. To start, I parsed out the elements in each comment. Most likely, a comment would contain text, #hashtag, @username, emojis, like this: </p>
+                    <blockquote> I love them already!!!😍❤️❤️#flawless @beyonce </blockquote>
+                    <p>The first task is to extract all of the different elements in the comment. For example, "@" and "?" are important because they might be strong indicators for the Evaluation stage; 😍😍😍😍 shows a stronger interest than only 😍. The <i>re</i> and <i>emoji</i> Python packages and <i>Natural Language Toolkit (NLTK)</i> basic functions help with this task. </p>
+
+                    <p> In order to determine a consumer’s attitude toward a product from a comment, I employed <i>Vader</i> from the <i>NLTK</i> package to determine the sentiment of each comment. <i>Vader</i> provides a sentiment score, which essentially indicates whether the comment demonstrates positive, neutral or negative sentiment. For this comment example, it is absolutely positive. </p>
+
+                    <p> To identify unique words in each comment, I used <i>term frequency-inverse document frequency (tf-idf)</i> to bring comments into a vector space with emphasis on the unique words in each comment. To reduce the resulting 10K vector space of unique words from high dimensionality, I used a semantics-based dimension reduction technique called <i>Latent Semantic Indexing (LSI)</i>. Now each comment is represented as a vectorized point in this space, where, smilar comments are clustered close together while comments with big differences in semantics are far apart. For example, the two closest neighbors of the example comments are: "Love them😍❤️❤️" and "'I LOVE YOUU❤️❤️😍". </p>
+                    <a href="#">
+                        <img class="img-responsive" src="../static/img/features.png" alt="" width="500" style="margin:0 auto">
+                    </a>
+                    <span class="caption text-muted">Feature matrix of the example comment.</span>
+                    <br>
+                    <h4> The Classifier </h4>
+                    <p> Having constructed the feature matrix for each comment, I noticed that it is a mixture of numerical and categorical features which need to be classified. For this challenging task, I chose the random forest classifier, which is known for its ability to deal with mixed feature types. Using the subset of the data that is labeled, I trained a random forest model to classify the comments into 7 categories using Scikit Learn. </p>
+                    <blockquote>Random forest is an ensemble supervised machine learning method that constructs a multitude of decision trees during the training stage and outputs the mean/mode prediction of the individual trees. Random forest corrects the overfitting habit of decision trees.</blockquote>
+                    <p> The random forest classifier is highly reliant on the right hyperparameters being provided. The two most important hyperparameters are the number of trees and maximum tree depth. I used a grid search to pick the appropriate paramters. Grid search operates by trying all the combinations of number of trees and maximum tree depth to find the model with the best performance.</p>
+
+                    <div id="imbalanced"></div>
+                    <h4> Imbalanced Data </h4>
+                    <p> Remember the highly unbalanced classes that I mentioned earlier? To let the classifier achieve optimal performance, classes need to be balanced. I used Synthetic Minority Over-sampling Technique (SMOTE) to oversample the minority class to match the majority class, and used the balanced dataset to train the random forest model. Because of the unbalanced data, I used precision and recall (instead of accuracy) to evaluate the performance of the model. Precision and recall are more robust when the data contains a majority of negatives.</p>
+                    <a href="#">
+                        <img class="img-responsive" src="../static/img/smote2.png" alt="">
+                    </a>
+                    <span class="caption text-muted">Use SMOTE to oversample the minority classes.</span>
+
+                    <br>
+                    <h2 class="section-heading"> Performance </h2>
+                    <br>
+                    <p> The entire labeled dataset (33K comments) was randomly split into training, validation and testing sets following a 60/20/20 rule. Training and validation sets were first used for hyperparameter selection to achieve the highest Area Under the Curve (AUC) of the Precision-Recall curve (PR curve). Then a final model was trained using combined training and validation sets, and tested on the test set. Only in this way, the generalization ability of the model can be properly evaluated.</p>
+                    <p>Depending on the needs of the company, thresholds for classification can be determined differently. For example, let's look at the Precision-Recall curves of the Spam class and Interest class. It is better to push real-time targeted notifications to uninterested consumers than to miss the ones who are really interested in the product. So, for Spam, false negative is better than false positive, meaning that we want to filter out fewer comments, so the company may prefer a higher threshold. For Interest, false positive is better than false negative, meaning that we want to include more comments, so a lower threshold may be preferred. I leave the choice to the client.</p>
+                    <a href="#">
+                        <img class="img-responsive" src="../static/img/thresholds.png" alt="" width="500" style="margin:0 auto">
+                    </a>
+                    <span class="caption text-muted"> Optimal thresholds may vary across labels: examples from Spam and Interest class.</span>
+
+                    <p>Using a regular 0.5 threshold, the model achieved high classification accuracy. Here I present the confusion matrix for marketing funnel classification.
+                    <a href="#">
+                        <img class="img-responsive" src="../static/img/confusion.png" alt="" width="350" style="margin:0 auto">
+                    </a>
+                    <span class="caption text-muted"> Confusion matrix for 7-class classification model.</span>
+
+
+                    We can see confusion between Neutral vs. Evaluation, and among Purchased vs. others. Let's have a closer look at the mislabeled comments. 
+                    <blockquote> Purchased mislabeled as Negative: “I order this two weeks ago and it still says "processing" smfh @kyliecosmetics” <br>
+                    Purchased mislabeled as Intent: "Holy grail. Can't live without it 😍" </blockquote>
+
+                    This actually provides a very interesting insight to the problem here. The first comment is from a customer who has purchased the product but not happy with the service. The second is from the same purchased group but she absolutely loved the product and will continue buying them, hence Intent. This suggests that there are new classes to be defined that can better categorize and predict consumer behavior. </p>
+
+                    <h2 class="section-heading"> Business Impact </h2>
+                    <p>For my project, I delivered ready-to-employ natural language classifiers to my client, CherryPick.ai, to predict consumer behavior from Instagram comments. The model achieved real-time, automated marketing funnel stage classification based on the information encapsulated in the comments.</p>
+                    <blockquote> This model will introduce a <b>new</b> product line for CherryPick.ai, offering their clients, retailers and brands insights about their customer base to further optimize marketing strategy. </blockquote>
+                    <p></p>
+
+                           <!-- Speaker Deck Slides Section -->
+                    <section id="slides">
+                        <h1 class="section-heading">Slides Show</h1>
+                        <div class="container">
+                            <div class="col-lg-6">
+                                <iframe src="https://docs.google.com/presentation/d/14KA0caoEFpIxUpIq3sI4RC42kaWuF6KPcJtTGf1weJU/embed?start=false&loop=true&delayms=15000" frameborder="0" width="700" height="500" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" align='center'></iframe>
+                            </div>
+                        </div>
+                    </section>
+
+                       <!-- Contact -->
+                    <section id="about" class="bg-light-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 text-center">
+                                <h2 class="section-heading">About</h2>
+                                <br>
+                                <img src="../static/img/mengyuan.png" class="img-responsive img-circle" alt="profilephoto" width='200' style="margin:0 auto">
+                                <br>
+                                <h4>Mengyuan Liu</h4>
+                                <p class="text-muted">Insight Data Science Fellow</p>
+                                <p class="text-muted">Ph.D. in Bioengineering, University of Washington<br> specialzing in computer vision, machine learning <br> with application in medical image analysis <br> Loves: traveling, food and dogs</p>
+                                <!--<ul class="list-inline social-buttons">
+                                    <li><a href="mailto:liumyzoe@uw.edu"><i class="fa fa-envelope"></i></a>
+                                    </li>
+                                    <li><a href="https://github.com/MengyuanZoe"><i class="fa fa-github"></i></a>
+                                    </li>
+                                    <li><a href="http://www.linkedin.com/in/mengyuan-liu"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul> -->
+                            </div>
+            
+                        </div>
+                    </div>
+                </section>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+    <section id="contact" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-0">
+                    <ul class="list-inline text-center">
+                    <h2 class="section-heading">Contact</h2>
+                    <br>
+                        <li>
+                            <a href="mailto:liumyzoe@uw.edu">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MengyuanZoe">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/in/mengyuan-liu">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!---<p class="copyright text-muted">Copyright &copy; Your Website 2016</p>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../static/js/jqBootstrapValidation.js"></script>
+    <script src="../static/js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../static/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

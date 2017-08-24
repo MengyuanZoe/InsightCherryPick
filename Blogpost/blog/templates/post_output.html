@@ -1,0 +1,39 @@
+{% extends "post.html" %}
+{% block content %}
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                    <div class="starter-template">
+                        <h4><br>Here are the results of your input Instagram comment: </h4>
+                        <p> Your Input Comment: <font color="MediumTurquoise">{{X_input}}</font> </p>
+                        <!--<p class="lead">{{purchase_intent[0]}} <font color="MediumTurquoise">{{purchase_intent[1]}}</font> {{purchase_intent[2]}} <br>--> {{label[0]}} <font color="MediumTurquoise">{{label[1]}}</font> {{label[2]}} </p>
+                    </div>
+            </div>
+            <script scr="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+            <script scr="static/js/bootstrap.min.js"></script>
+            <script> 
+            window.onload = function (event) {
+                window.location.hash = "#example2";
+            };
+            </script>
+
+        </div>
+    </article>
+
+    <!-- jQuery -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../static/js/jqBootstrapValidation.js"></script>
+    <script src="../static/js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../static/js/clean-blog.min.js"></script>
+
+ {% endblock %}s
+
