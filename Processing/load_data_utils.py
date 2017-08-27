@@ -21,6 +21,7 @@ def load_process_comments(connection_sting):
 		data: labeled portion of original dataset
 		parsed_comments_200k: entire processed dataset
 		parsed_commnets: labeled portion of processed dataset
+	Note: on ~220K comments, this function to load and parse comments takes about 10min to run.
 	"""
 	# connect:
 	con = psycopg2.connect(connection_sting)
